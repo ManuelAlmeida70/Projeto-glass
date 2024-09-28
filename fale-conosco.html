@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Google Glass</title>
+    <link rel="stylesheet" href="_css/estilo.css">
+    <link rel="stylesheet" type="text/css" href="_css/form.css"/>
+    <script type="text/javascript" src="_javascript/funcoes.js"></script>
+
+</head>
+<body>
+    <div id="interface">
+    <header id="cabecalho">
+        <hgroup>
+<h1>Google Glass</h1>
+<h2>A revolução do Google está chegando</h2>
+        </hgroup>
+
+<img id="icone" src="_imagens/fotos.png">
+<nav id="menu">
+    
+<h1>Menu Principal</h1>
+<ul type="square">
+<li onmousemove="mudaFoto('_imagens/home.png')" onmouseout="mudaFoto('_imagens/multimidia.png')"><a href="index.html">Home</a></li>
+<li onmousemove="mudaFoto('_imagens/especificacoes.png')" onmouseout="mudaFoto('_imagens/multimidia.png')"><a href="specs.html">Especificações</a></li>
+<li onmousemove="mudaFoto('_imagens/fotos.png')" onmouseout="mudaFoto('_imagens/multimidia.png')"><a href="fotos.html">Fotos</a></li>
+<li onmousemove="mudaFoto('_imagens/multimidia.png')" onmouseout="mudaFoto('_imagens/multimidia.png')"><a href="multimidia.html">Multimídia</a></li>
+<li onmousemove="mudaFoto('_imagens/contato.png')" onmouseout="mudaFoto('_imagens/multimidia.png')"><a href="fale-conosco.html">Fale conosco</a></li>
+   </ul>
+</nav>
+</header>
+<section id="corpo-full">
+    <article id="noticia-principal">
+        <header id="cabecalho-artigo">
+    <hgroup>
+<h3>Fale Conosco > Contato</h3>
+<h1>Formulário de Contato</h1>
+<h2>por Manuel Mazunga de Almeida</h2>
+<h3 class="direita">Atualizado em 01/Maio/2021</h3>
+</hgroup>
+</header>
+
+<form>
+    <fieldset id="usuario">
+<legend>Identificação do Usuário</legend>
+    <label for="cNome">Nome</label><br>
+    <input type="text" name="tNome" id="cNome" size="20" maxlength="40" placeholder="Nome complento"/><br/>
+    <label for="cSenha">Senha</label><br>
+    <input type="password" name="tSenha" id="cSenha" size="8" maxlength="8" placeholder="8 dígitos"/><br/>
+    <label for="cEmail">Email</label><br>
+    <input type="email" name="tEmail" id="cEmail" size="20" maxlength="30" placeholder="Mazunga@hu.com"/>
+    <fieldset id="sexo">
+    <legend>Sexo</legend>
+        <input type="radio" name="tSexo" id="cMasc" checked/><label for="cMasc">Masculino</label><br/>
+        <input type="radio" name="tSexo" id="cFem" /><label for="cFem">Feminino</label>
+        </fieldset>
+    <label for="cData">Data de Nascimento</label><br/>
+    <input type="date" name="tData" id="cData"/>
+    
+</fieldset>
+
+<fieldset id="endereco">
+<legend>Endereço do Usuário</legend>
+    <label for="cLogradouro">Logradouro</label><br/>
+    <input type="text" name="tLogradouro" id="cLogradouro" placeholder="Rua, Aven, Trav" size="20" maxlength="40" /><br/>
+    <label for="cNumero">Número</label><br/>
+    <input type="text" name="tNumero" id="cNumero" placeholder="(+244) 947 *** **8"><br>
+    <label for="cEstado">Estado</label><br/>
+    <select name="tEstado" id="cEstado">
+        <optgroup label="Região do norte">
+        <option value="Ld">Luanda</option>
+        <option value=""Ug selected="">Uíge</option>
+        </optgroup>
+        <optgroup label="Região do sul">
+        <option value="Hl">Huíla</option>
+        <option value="Be">Bíe</option>
+        <option value="Bgl">Benguela</option>
+        </optgroup>
+    </select><br/>
+    <label for="cCid">Cidade</label><br/>
+    <input type="text" name="tCid" name="cCid" size="20" maxlength="40" placeholder="Nome da cidade"list="cidades"/>
+    <datalist id="cidades">
+        <option>Kilamba</option>
+        <option>Uíge</option>
+        <option>Praia morena</option>
+        <option>Kinaxixi</option>
+        <option>Lubango</option>
+    </datalist>
+</fieldset>
+
+<fieldset id="mensagem">
+<legend>Mensagem do Usuário</legend>
+    <label for="cGrauSms">Grau de Urgência</label><br/>
+    Mín<input type="range" name="tGrauSms" id="cGrauSms" min="0" max="10" step="1" />Max<br/>
+    <label>Mensagem</label><br/>
+    <textarea name="tSms" id="cSms" maxlength="100" placeholder="Deixe aqui sua mensagem"cols="35" rows="7"></textarea>
+</fieldset>
+
+<fieldset id="pedido">
+<legend>Quero um Google Glass</legend>
+    <input type="checkbox" name="tPed" id="cPed" checked />
+    <label for="cPed">Gostaria de adquirir um Google Glass quando disponível</label><br/>
+    <label for="cCor">Cor</label><br/>
+    <input type="color" name="tCor" id="cCor" value="#dddddd"><br/>
+    <label for="cQtd">Quantidade</label><br/>
+    <input type="number" name="tQtd" id="cQtd" min="1" max="8"><br/>
+    <label>Preço Total: R$</label><br/>
+    <input type="text" name="tTotal" id="cTotal" readonly placeholder="Total a pagar">
+</fieldset>
+<input type="image" name="tBotao" id="cBotao" src="_imagens/botao-enviar.png"/>
+</form>
+<footer id="rodape">
+<p>Copyright 2021 - by Manuel Mazunga de Almeida<br>
+Facebook | Twitter</p>
+</footer>
+</div>
+</body>
+</html>
